@@ -1,0 +1,29 @@
+[package]
+name = "musinsa-sku"
+version = "0.1.0"
+edition = "2024"
+description = "Musinsa Standard women's SKU collector and CSV reports"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive"] }
+csv = "1.4"
+futures = "0.3"
+httpdate = "1"
+regex = "1"
+reqwest = { version = "0.13", default-features = false, features = ["rustls", "json", "query", "gzip", "brotli"] }
+rust_xlsxwriter = "0.102"
+scraper = "0.24"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thirtyfour = "0.38"
+tempfile = "3"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "sync", "signal"] }
+
+[dev-dependencies]
+zip = { version = "9", default-features = false, features = ["deflate"] }
+
+[profile.release]
+lto = "thin"
+strip = true

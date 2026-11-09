@@ -1,19 +1,17 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
 
-# Virtual environments
-.venv
 
 # Results
-*.xlsx
-*.xls
-
 *.csv
 
-# CLAUDE
-CLAUDE.md
+# Profiling output (timings, request statistics, workbooks)
+/profiles/
+/outputs/
+
+# Rust build output and collection cache
+/target/
+/.cache/
+*.run.json
+
+# Other tools
+/.serena/
+/.cache/
